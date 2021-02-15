@@ -17,7 +17,7 @@ def strip_csv(inFile, outFile="cleaned.csv"):
 
     # remove extra columns
     print("Removing extra columns...")
-    keep_col = ['X', 'Y', 'U', 'V']
+    keep_col = ['X', 'Y', 'U', 'V', 'img']
     df = df[keep_col]
     print(df)
     print('')
