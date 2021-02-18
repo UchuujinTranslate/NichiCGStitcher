@@ -4,6 +4,7 @@ import sys
 # inFile = "Sekiguchi1.csv"
 # outFile = "cleaned.csv"
 
+
 # inFile is path to csv file
 # outFile is path to output csv file
 def strip_csv(inFile, outFile="cleaned.csv"):
@@ -61,7 +62,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 2:
         inFile = sys.argv[1]
         strip_csv(inFile)
-    
+
     # two args
     if len(sys.argv) >= 3:
         inFile = sys.argv[1]

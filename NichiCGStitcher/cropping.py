@@ -51,7 +51,7 @@ def crop(coords_csv):
             looped_once = False
 
             cropped = im.crop(uvcoords)
-  
+
             csvNoExt = coords_csv.rsplit('.', 1)[0]
             filename = f'{crops_dir}{csvNoExt}_{counter}.png'
             cropped.save(filename)

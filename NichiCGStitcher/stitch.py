@@ -38,7 +38,7 @@ index = list(csv_df.index.values)
 
 counter = 0
 for a, b in grouper(index, 2):
-    
+
     print("counter:", counter)
     a_coords = [csv_df.X[a], csv_df.Y[a], csv_df.U[a], csv_df.V[a]]
     b_coords = [csv_df.X[b], csv_df.Y[b], csv_df.U[b], csv_df.V[b]]

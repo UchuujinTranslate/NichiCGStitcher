@@ -3,6 +3,7 @@ notes/
 cropped/
 cgs/
 tests/
+/*.png
 
 # root dir csvs only
 /*.csv
