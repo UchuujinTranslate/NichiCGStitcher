@@ -30,13 +30,17 @@ def strip_csv(inFile, outFile="cleaned.csv"):
 
     # drop rows with NaN values
     print("Removing rows with empty values...")
-    df = df.dropna(how='all')
+    df = df.dropna(thresh=4)
     print(df)
     print('')
 
     # convert all to int
     print("Converting all coordinates to integers...")
-    df = df.apply(pd.to_numeric, downcast='integer')
+    # df = df.apply(pd.to_numeric, downcast='integer')
+    df['X'] = pd.to_numeric(df['X'], downcast='integer')
+    df['Y'] = pd.to_numeric(df['Y'], downcast='integer')
+    df['U'] = pd.to_numeric(df['U'], downcast='integer')
+    df['V'] = pd.to_numeric(df['V'], downcast='integer')
     print(df)
     print('')
 
