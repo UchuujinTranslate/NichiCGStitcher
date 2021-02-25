@@ -5,6 +5,8 @@ import sys
 # outFile = "cleaned.csv"
 
 
+# skip_blank_lines
+
 # inFile is path to csv file
 # outFile is path to output csv file
 def strip_csv(inFile, outFile="cleaned.csv"):

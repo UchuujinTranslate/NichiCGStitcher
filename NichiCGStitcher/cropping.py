@@ -9,7 +9,7 @@ cgs_dir = "cgs/"
 
 def crop(coords_csv):
     print(f"Opening {coords_csv}")
-    df = pd.read_csv(coords_csv)
+    df = pd.read_csv(coords_dir + coords_csv)
     print(df)
 
     inImage = cgs_dir + df.img[0]
@@ -20,7 +20,6 @@ def crop(coords_csv):
 
     # Display actual image
     # im.show()
-
 
     # it1, it2 = more_itertools.pairwise(df.iterrows())
     # print(it1)
@@ -34,12 +33,12 @@ def crop(coords_csv):
     for index, row in df.iterrows():
         print(row)
         print('------')
-        if looped_once == False:
+        if looped_once is False:
             coords1 = [df.X[index], df.Y[index], df.U[index], df.V[index]]
             print("Coords 1:", coords1)
             looped_once = True
 
-        elif looped_once == True:
+        elif looped_once is True:
             coords2 = [df.X[index], df.Y[index], df.U[index], df.V[index]]
             print("Coords 2:", coords2)
 
